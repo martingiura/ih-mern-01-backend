@@ -1,11 +1,11 @@
-// ./server/controllers/guitarController.js
+// ./server/controllers/stores.js
 const Store = require("./../models/Store");
 
 exports.create = async (req, res) => {
   // DEL FORMULARIO, CREAMOS VARIABLES Y ASIGNAMOS VALORES.
   const { nombre, domicilio, telefono } = req.body;
 
-  // CREAR UNA GUITARRA EN BASE DE DATOS
+  // CREAR UN STORE EN BASE DE DATOS
   try {
     const newStore = await Store.create({
       nombre,
